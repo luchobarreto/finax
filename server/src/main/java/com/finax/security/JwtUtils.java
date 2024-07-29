@@ -45,7 +45,6 @@ public class JwtUtils {
                 .maxAge(24 * 60 * 60)
                 .httpOnly(true)
                 .secure(false)
-                .sameSite("None")
                 .build();
     }
     
