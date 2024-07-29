@@ -336,7 +336,7 @@ const Dashboard: React.FC<DefaultPageProps> = ({ user, isUserLoading}) => {
                 if(c === Currency.USD) {
                     currencies[c] = 1;
                 } else {
-                    await getExchangeRate({
+                    currencies[c] = await getExchangeRate({
                         amount: 1,
                         currencyOne: Currency.USD,
                         currencyTwo: c as Currency
